@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".CreateTodoItemActivity">
+
+    <TextView
+        android:id="@+id/createLabelTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32sp"
+        android:text="Create Todo"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/createLinearTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32sp"
+        android:background="@drawable/ic_edittext_background_1"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/createClockImageView"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/black"
+            android:onClick="getTime"
+            android:src="@drawable/ic_baseline_add_alarm_24" />
+        />
+
+        <Switch
+            android:id="@+id/createAlarmSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:onClick="setSwitch"
+            android:switchTextAppearance="@color/black"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:visibility="gone"
+            tools:ignore="OnClick,UseSwitchCompatOrMaterialXml" />
+
+        <TextView
+            android:id="@+id/createTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15sp"
+            android:onClick="getTime"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/createTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_marginBottom="5sp"
+            android:text="Title"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <EditText
+            android:id="@+id/createTitleEditView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            android:cursorVisible="true"
+            android:hint="Insert Title:"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/createDescriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_marginBottom="5sp"
+            android:text="Description"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <EditText
+            android:id="@+id/createDescriptionEditView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            android:cursorVisible="true"
+            android:hint="Insert Description:"
+            android:inputType="textMultiLine"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/createAddButton"
+            android:textSize="20sp"
+            android:onClick="addButtonClick"
+            android:textColor="@color/black"
+            android:text="Add" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/createCancelButton"
+            android:textSize="20sp"
+            android:layout_marginLeft="15sp"
+            android:onClick="cancelButtonClick"
+            android:textColor="@color/black"
+            android:text="CanCel" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/createDeleteButton"
+            android:textSize="20sp"
+            android:layout_marginLeft="15sp"
+            android:visibility="gone"
+            android:onClick="deleteButtonClick"
+            android:textColor="@color/Red"
+            android:text="Delete" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
